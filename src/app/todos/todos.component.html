@@ -1,0 +1,13 @@
+
+<div>
+    <ul>
+      <li
+      *ngFor="let toDo of (todos$ | async)!"
+      >
+       {{toDo}}
+       <button (click)="removeTodo(toDo)">X</button>
+    </li>
+    </ul>
+    <input type="text" [(ngModel)]="toDo" placeholder="enter to do"/>
+    <button (click)="addTodo()">Add To do</button>
+  </div>
